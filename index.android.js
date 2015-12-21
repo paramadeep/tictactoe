@@ -21,31 +21,41 @@ var tictactoe = React.createClass({
     return (
         <View style={styles.container}>
             <View style={styles.row} > 
-                <TextInput style={styles.column} /> 
-                <TextInput style={styles.column} /> 
-                <TextInput style={styles.column} /> 
+                <Cell /> 
+                <Cell /> 
+                <Cell /> 
             </View>
             <View style={styles.row} >  
-                <TextInput style={styles.column} /> 
-                <TextInput style={styles.column} /> 
-                <TextInput style={styles.column} /> 
+                <Cell /> 
+                <Cell /> 
+                <Cell /> 
             </View>
             <View style={styles.row} >  
-                <TextInput style={styles.column} /> 
-                <TextInput style={styles.column} /> 
-                <TextInput style={styles.column} /> 
+                <Cell /> 
+                <Cell /> 
+                <Cell /> 
             </View>
         </View>
         );  
   },
 });
 
+var Cell = React.createClass({
+  render: function(){
+    return (
+        <TextInput 
+          style={styles.cell} 
+          maxLength={1} 
+          autoCorrect={false} 
+          autoFocus={false} 
+        />
+        );
+  },
+});
+
 var styles = StyleSheet.create({
   container: {flexWrap: 'wrap'},
   row: {flex:1, flexDirection: 'row'},
-  row1: {flex:1,backgroundColor: 'green', flexDirection: 'row'},
-  row2: {flex:1,backgroundColor: 'red'},
-  row3: {flex:1,backgroundColor: 'blue'},
-  column: {flex:1/3},
+  cell: {flex:1/3},
 });
 AppRegistry.registerComponent('tictactoe', () => tictactoe);
