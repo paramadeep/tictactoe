@@ -1,7 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- */
 'use strict';
 
 var React = require('react-native');
@@ -16,7 +12,6 @@ var {
 } = React;
 
 var tictactoe = React.createClass({
-
   render: function() {
     return (
         <View style={styles.container}>
@@ -39,6 +34,7 @@ var tictactoe = React.createClass({
         );  
   },
 });
+
 
 var Cell = React.createClass({
   render: function(){
